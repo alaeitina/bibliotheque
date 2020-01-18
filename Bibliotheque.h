@@ -16,11 +16,21 @@ private:
     string nom;
     string adresse;
     int code;
-    vector<Livre> listeLivres;
+    static int codeNext;
+    vector<Livre*> listeLivres;
+    vector<Livre*> emprunts;
+    //il faut refaire l'affichage pour ajouter les livres empruntés
+
 
 public:
-    Bibliotheque(string, string, int);
-    Bibliotheque(const Bibliotheque&);
+    Bibliotheque(string, string);
+    void ajouterLivre(Livre*);
+    void afficheLivres();
+    void afficheLivreParCategorie(int);
+    vector<Livre*> getListeLivres() const;
+    bool possedeLivre(int);
+    Livre* search(int);
+    void emprunt(Bibliotheque*, int);
 
 };
 

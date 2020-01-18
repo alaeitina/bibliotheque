@@ -4,7 +4,7 @@
 
 #include "BandeDessinee.h"
 
-BandeDessinee::BandeDessinee(int c, string a, string t, string edit, int num_isbn, int publ, int et, string dess):Livre(c, a, t, edit, num_isbn, publ, et) {
+BandeDessinee::BandeDessinee(int c, string a, string t, string edit, string num_isbn, int publ, int et, string dess):Livre(c, a, t, edit, num_isbn, publ, et) {
     dessinateur = dess;
 }
 

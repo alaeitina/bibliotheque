@@ -5,12 +5,12 @@
 #include "Adherent.h"
 
 
-Adherent::Adherent(string n, string p, int num, Bibliotheque* bibliotheque, int nbEmprunts){
+Adherent::Adherent(string n, string p, int num, Bibliotheque* bibliotheque, int nbEmpr){
     nom = n;
     prenom = p;
     numAdherent = num;
     inscritA = bibliotheque;
-    limEmprunts = nbEmprunts;
+    nbEmprunts = nbEmpr;
 }
 
 
@@ -19,5 +19,5 @@ Adherent::Adherent(Adherent &other){
     prenom = other.prenom;
     numAdherent = other.numAdherent;
     inscritA = other.inscritA;
-    limEmprunts = other.limEmprunts;
+    nbEmprunts = other.nbEmprunts;
 }

@@ -15,7 +15,7 @@ private:
     int numAdherent;
     Bibliotheque* inscritA;
     //Livre* emprunts;
-    int limEmprunts;
+    int nbEmprunts;
 
 public:
     Adherent(string, string, int, Bibliotheque*, int);

@@ -5,7 +5,7 @@
 #include "PieceDeTheatre.h"
 
 
-PieceDeTheatre::PieceDeTheatre(int c, string a, string t, string edit, int num_isbn, int publ, int et, int s) : Livre (c, a, t, edit, num_isbn, publ, et) {
+PieceDeTheatre::PieceDeTheatre(int c, string a, string t, string edit, string num_isbn, int publ, int et, int s) : Livre (c, a, t, edit, num_isbn, publ, et) {
     siecle = s;
 }
 

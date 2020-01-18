@@ -17,12 +17,12 @@ protected:
     string auteur;
     string titre;
     string editeur;
-    int ISBN;
+    string ISBN;
     int public_destine; // adulte, ados, jeunesses ou tout public
     int etat; // libre ou emprunté ou prêté
 
 public:
-    Livre(int, string, string, string, int, int, int);
+    Livre(int, string, string, string, string, int, int);
     Livre(const Livre&);
     enum ETATS {LIBRE = 0, EMPRUNTE = 1, PRETE = 2};
     enum PUBLIC {ADULTE = 0, ADOS = 1, JEUNESSES = 2, TOUTPUBLIC= 3};

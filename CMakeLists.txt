@@ -12,4 +12,4 @@ add_executable(bibliotheque
         Livre.cpp
         Livre.h
         BandeDessinee.cpp
-        BandeDessinee.h RecueilDePoesie.cpp RecueilDePoesie.h Roman.cpp Roman.h PieceDeTheatre.cpp PieceDeTheatre.h Album.cpp Album.h Adherent.cpp Adherent.h)
+        BandeDessinee.h RecueilDePoesie.cpp RecueilDePoesie.h Roman.cpp Roman.h PieceDeTheatre.cpp PieceDeTheatre.h Album.cpp Album.h Adherent.cpp Adherent.h Emprunt.cpp Emprunt.h)

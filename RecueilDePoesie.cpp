@@ -5,7 +5,7 @@
 #include "RecueilDePoesie.h"
 
 
-RecueilDePoesie::RecueilDePoesie(int c, string a, string t, string edit, int num_isbn, int publ, int et, int indic):Livre(c, a, t, edit, num_isbn, publ, et){
+RecueilDePoesie::RecueilDePoesie(int c, string a, string t, string edit, string num_isbn, int publ, int et, int indic):Livre(c, a, t, edit, num_isbn, publ, et){
     indicateur = indic;
 }
 

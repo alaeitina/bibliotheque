@@ -4,7 +4,7 @@
 
 #include "Roman.h"
 
-Roman::Roman(int c, string a, string t, string edit, int num_isbn, int publ, int et, string g):Livre(c, a, t, edit, num_isbn, publ, et){
+Roman::Roman(int c, string a, string t, string edit, string num_isbn, int publ, int et, string g):Livre(c, a, t, edit, num_isbn, publ, et){
     genre = g;
 }
 

@@ -5,7 +5,7 @@
 #include "Livre.h"
 
 
-Livre::Livre(int c, string a, string t, string edit, int num_isbn, int publ, int et) {
+Livre::Livre(int c, string a, string t, string edit, string num_isbn, int publ, int et) {
     code = c;
     auteur = a;
     titre = t;

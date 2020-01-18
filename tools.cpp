@@ -6,18 +6,46 @@
 
 string typeName(int type) {
     switch (type){
-        case 0:
+        case TYPE::LIVRE :
             return "Livre";
-        case 1:
+        case TYPE::ALBUM :
             return "Album";
-        case 2:
+        case TYPE::BD :
             return "Bande Dessinee";
-        case 3:
+        case TYPE::PIECE:
             return "Piece de Theatre";
-        case 4:
+        case TYPE::POESIE :
             return "Recueil de Poesie";
-        case 5:
+        case TYPE::ROMAN :
             return "Roman";
+        default:
+            return "ERREUR";
+    }
+}
+
+string etatName(int type) {
+    switch (type){
+        case ETATS::LIBRE :
+            return "Libre";
+        case ETATS::EMPRUNTE :
+            return "Emprunte";
+        case ETATS::PRETE :
+            return "Prete";
+        default:
+            return "ERREUR";
+    }
+}
+
+string publicName(int type) {
+    switch (type){
+        case PUBLIC::TOUTPUBLIC :
+            return "Tout Public";
+        case PUBLIC::JEUNESSES :
+            return "Jeunesses";
+        case PUBLIC::ADOS :
+            return "Ados";
+        case PUBLIC::ADULTE :
+            return "Adulte";
         default:
             return "ERREUR";
     }

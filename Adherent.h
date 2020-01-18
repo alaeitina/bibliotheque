@@ -14,12 +14,12 @@ private:
     string prenom;
     int numAdherent;
     Bibliotheque* inscritA;
-    //Livre* emprunts;
-    int nbEmprunts;
+    vector<Livre*> emprunts;
+    int limEmprunts;
 
 public:
     Adherent(string, string, int, Bibliotheque*, int);
-    Adherent(Adherent&);
+    void emprunt(Bibliotheque*, int);
 
 
 

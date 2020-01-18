@@ -11,8 +11,7 @@ class RecueilDePoesie : public Livre {
 private:
     int indicateur;
 public:
-    RecueilDePoesie(int, string, string, string, string, int, int, int);
-    RecueilDePoesie(const RecueilDePoesie&);
+    RecueilDePoesie(string, string, string, string, int, int);
     enum INDICATEURS {VERS = 0, PROSE = 1, VERSPROSE = 2};
 };
 

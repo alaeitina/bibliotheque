@@ -4,10 +4,7 @@
 
 #include "BandeDessinee.h"
 
-BandeDessinee::BandeDessinee(int c, string a, string t, string edit, string num_isbn, int publ, int et, string dess):Livre(c, a, t, edit, num_isbn, publ, et) {
+BandeDessinee::BandeDessinee(string a, string t, string edit, string num_isbn, int publ, string dess):Livre(a, t, edit, num_isbn, publ) {
     dessinateur = dess;
-}
-
-BandeDessinee::BandeDessinee(const BandeDessinee &other):Livre(other) {
-    dessinateur = other.dessinateur;
+    type = TYPE::BD;
 }

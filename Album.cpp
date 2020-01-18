@@ -4,10 +4,7 @@
 
 #include "Album.h"
 
-Album::Album(int c, string a, string t, string edit, string num_isbn, int publ, int et, int illustr) : Livre (c, a, t, edit, num_isbn, publ, et) {
+Album::Album(string a, string t, string edit, string num_isbn, int publ, int illustr) : Livre (a, t, edit, num_isbn, publ) {
     illustration = illustr;
-}
-
-Album::Album(Album &other) : Livre(other) {
-    illustration = other.illustration;
+    type = TYPE::ALBUM;
 }

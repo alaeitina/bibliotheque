@@ -5,10 +5,7 @@
 #include "RecueilDePoesie.h"
 
 
-RecueilDePoesie::RecueilDePoesie(int c, string a, string t, string edit, string num_isbn, int publ, int et, int indic):Livre(c, a, t, edit, num_isbn, publ, et){
+RecueilDePoesie::RecueilDePoesie(string a, string t, string edit, string num_isbn, int publ, int indic):Livre(a, t, edit, num_isbn, publ){
     indicateur = indic;
-}
-
-RecueilDePoesie::RecueilDePoesie(const RecueilDePoesie &other):Livre(other){
-    indicateur = other.indicateur;
+    type = TYPE::POESIE;
 }

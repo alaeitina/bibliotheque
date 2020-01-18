@@ -11,8 +11,7 @@ class BandeDessinee : public Livre{
 protected:
     string dessinateur;
 public :
-    BandeDessinee(int, string, string, string, string, int, int, string);
-    BandeDessinee(const BandeDessinee&);
+    BandeDessinee(string, string, string, string, int, string);
 };
 
 

@@ -13,9 +13,7 @@ private:
     string genre;
 
 public:
-    Roman(int, string, string, string, string, int, int, string);
-    Roman(const Roman&);
-
+    Roman(string, string, string, string, int, string);
 
 };
 

@@ -7,6 +7,9 @@
 
 
 #include <iostream>
+
+#include "tools.h"
+
 using namespace std;
 
 
@@ -18,14 +21,19 @@ protected:
     string titre;
     string editeur;
     string ISBN;
-    int public_destine; // adulte, ados, jeunesses ou tout public
+    int publicDestine; // adulte, ados, jeunesses ou tout public
     int etat; // libre ou emprunté ou prêté
+    static int codeMax;
+    int type;
 
 public:
-    Livre(int, string, string, string, string, int, int);
-    Livre(const Livre&);
-    enum ETATS {LIBRE = 0, EMPRUNTE = 1, PRETE = 2};
-    enum PUBLIC {ADULTE = 0, ADOS = 1, JEUNESSES = 2, TOUTPUBLIC= 3};
+    Livre(string, string, string, string, int);
+    void setEtat(int);
+    int getCode() const;
+    int getType() const;
+    int getEtat() const;
+    void affiche();
+
 
 };
 

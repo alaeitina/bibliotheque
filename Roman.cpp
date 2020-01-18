@@ -4,10 +4,7 @@
 
 #include "Roman.h"
 
-Roman::Roman(int c, string a, string t, string edit, string num_isbn, int publ, int et, string g):Livre(c, a, t, edit, num_isbn, publ, et){
+Roman::Roman(string a, string t, string edit, string num_isbn, int publ, string g):Livre(a, t, edit, num_isbn, publ){
     genre = g;
-}
-
-Roman::Roman(const Roman &other):Livre(other) {
-    genre = other.genre;
+    type = TYPE::ROMAN;
 }

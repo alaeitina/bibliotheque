@@ -14,8 +14,7 @@ private:
     int illustration;
 
 public:
-    Album(int, string, string, string, string, int, int, int);
-    Album(Album&);
+    Album(string, string, string, string, int, int);
     enum ILLUSTRATION {PHOTO = 0, DESSIN = 1, PHOTODESSIN = 2};
 };
 

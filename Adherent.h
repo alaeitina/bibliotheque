@@ -19,8 +19,10 @@ private:
 
 public:
     Adherent(string, string, int, Bibliotheque*, int);
+    void affiche();
     void emprunt(Bibliotheque*, int);
     void rendre(Bibliotheque*, int);
+    bool isAdherentBibliotheque(Bibliotheque* bibliotheque);
 
 
 

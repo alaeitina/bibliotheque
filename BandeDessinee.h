@@ -12,6 +12,7 @@ protected:
     string dessinateur;
 public :
     BandeDessinee(string, string, string, string, int, string);
+    void affiche();
 };
 
 

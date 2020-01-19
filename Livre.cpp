@@ -4,11 +4,11 @@
 
 #include "Livre.h"
 
-int Livre::codeMax = 0;
+int Livre::codeNext = 0;
 
 Livre::Livre(string a, string t, string edit, string num_isbn, int publ) {
-    code = codeMax;
-    codeMax++;
+    code = codeNext;
+    codeNext++;
     auteur = a;
     titre = t;
     editeur = edit;
@@ -40,7 +40,8 @@ int Livre::getEtat() const{
 }
 
 void Livre::affiche() {
-    cout << this->titre << ", " << this->auteur << ", " << this->editeur << "- type : " << this->type << endl;
+    cout << "Livre " << this->code << " : " << endl << this->titre << ", " << this->auteur << ", " << this->editeur << endl;
+    cout << "ISBN : " << this->ISBN << "- public : " << publicName(this->publicDestine) << "- type : " << typeName(this->type) << endl;
 }
 
 string Livre::getISBN() const{

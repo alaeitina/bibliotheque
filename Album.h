@@ -15,7 +15,7 @@ private:
 
 public:
     Album(string, string, string, string, int, int);
-    enum ILLUSTRATION {PHOTO = 0, DESSIN = 1, PHOTODESSIN = 2};
+    void affiche();
 };
 
 

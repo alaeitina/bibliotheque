@@ -12,7 +12,7 @@ private:
     int indicateur;
 public:
     RecueilDePoesie(string, string, string, string, int, int);
-    enum INDICATEURS {VERS = 0, PROSE = 1, VERSPROSE = 2};
+    void affiche();
 };
 
 

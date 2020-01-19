@@ -23,6 +23,7 @@ private:
 
 public:
     Bibliotheque(string, string);
+    string getNom() const;
     void ajouterLivre(Livre*);
     void afficheLivres();
     void afficheLivreParCategorie(int);

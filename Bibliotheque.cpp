@@ -13,12 +13,16 @@ Bibliotheque::Bibliotheque(string n, string a){
     codeNext++;
 }
 
+string Bibliotheque::getNom() const{
+    return nom;
+}
+
 void Bibliotheque::ajouterLivre(Livre* livre) {
     listeLivres.push_back(livre);
 }
 
 void Bibliotheque::afficheLivres() {
-    cout << "Bibliotheque " << this->nom << " :" << endl;
+    cout << "---- Bibliotheque " << this->nom << " : ----" << endl;
     for(int i = 0; i < listeLivres.size(); i++){
         listeLivres[i]->affiche();
     }
@@ -28,7 +32,7 @@ void Bibliotheque::afficheLivres() {
 }
 
 void Bibliotheque::afficheLivreParCategorie(int categorie) {
-    cout << "Bibliotheque " << this->nom << " - Livres de la catégorie " << typeName(categorie) << endl;
+    cout << "---- Bibliotheque " << this->nom << " - Livres de la catégorie " << typeName(categorie) << " ----" << endl;
     for(int i = 0; i < listeLivres.size(); i++){
         if(listeLivres[i]->getType() == categorie){
             listeLivres[i]->affiche();
@@ -82,7 +86,9 @@ Livre* Bibliotheque::searchListeLivre(int codeLivre) {
         if (listeLivres[i]->getCode() == codeLivre) {
             return listeLivres[i];
         }
+        i++;
     }
+
     return nullptr;
 }
 
@@ -134,4 +140,14 @@ void Bibliotheque::demande(Bibliotheque* bibliotheque, string isbn){
         }
     }
     cout << "Cette demande n'est pas acceptable" << endl;
+}
+
+void Bibliotheque::rendre() {
+    for (auto i = 0; i < emprunts.size(); i++) {
+        if (emprunts[i]->getEtat() != ETATS::EMPRUNTE){
+            emprunts[i]->setEtat(ETATS::LIBRE);
+            emprunts.erase(emprunts.begin()+i);
+            return;
+        }
+    }
 }

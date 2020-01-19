@@ -21,10 +21,9 @@ protected:
     string titre;
     string editeur;
     string ISBN;
-    int publicDestine; // adulte, ados, jeunesses ou tout public
-    int etat; // libre ou emprunté ou prêté
-
-    static int codeMax;
+    int publicDestine;
+    int etat;
+    static int codeNext;
     int type;
 
 public:
@@ -34,7 +33,7 @@ public:
     int getType() const;
     int getEtat() const;
     string getISBN() const;
-    void affiche();
+    virtual void affiche();
 
 };
 

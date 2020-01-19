@@ -9,3 +9,8 @@ PieceDeTheatre::PieceDeTheatre(string a, string t, string edit, string num_isbn,
     siecle = s;
     type = TYPE::PIECE;
 }
+
+void PieceDeTheatre::affiche() {
+    cout << "Livre " << this->code << " : " << endl << this->titre << ", " << this->auteur << ", " << this->editeur << endl;
+    cout << "ISBN : " << this->ISBN << " - public : " << publicName(this->publicDestine) << " - siecle : " << siecleName(this->siecle) << " - type : " << typeName(this->type) << endl;
+}

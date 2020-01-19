@@ -14,7 +14,7 @@ private:
 
 public:
     Roman(string, string, string, string, int, string);
-
+    void affiche();
 };
 
 

@@ -19,7 +19,6 @@ private:
     static int codeNext;
     vector<Livre*> listeLivres;
     vector<Livre*> emprunts;
-    //il faut refaire l'affichage pour ajouter les livres empruntés
 
 
 public:
@@ -28,9 +27,16 @@ public:
     void afficheLivres();
     void afficheLivreParCategorie(int);
     vector<Livre*> getListeLivres() const;
+    bool possedeLivreListe(int);
+    bool possedeLivreEmprunts(int);
     bool possedeLivre(int);
+    Livre* searchListeLivre(int);
+    Livre* searchEmprunts(int);
     Livre* search(int);
-    void emprunt(Bibliotheque*, int);
+    void pret(Bibliotheque*, int);
+    void supprimer(int);
+    void demande(Bibliotheque*, string);
+    void rendre();
 
 };
 

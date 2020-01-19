@@ -6,7 +6,6 @@
 #include "Album.h"
 #include "BandeDessinee.h"
 #include "Bibliotheque.h"
-#include "Emprunt.h"
 #include "Livre.h"
 #include "PieceDeTheatre.h"
 #include "RecueilDePoesie.h"
@@ -30,13 +29,13 @@ void fixture(){
     //Livres
     Livre Livre1 = Livre("Tina Alaei", "L'histoire de ma vie", "Editions No One Cares", "0000000001", PUBLIC::TOUTPUBLIC);
     Livre Livre2 = Livre("Camille Alaei", "Le petit chat", "Editions We Care", "0000000002", PUBLIC::JEUNESSES);
-    Livre Livre3 = Livre("Eiichiro Oda", "One Piece Tome 1", "Editions We Care", "0000000003", PUBLIC::TOUTPUBLIC);
-    Livre Livre4 = Livre("Eiichiro Oda", "One Piece Tome 2", "Editions We Care", "0000000004", PUBLIC::TOUTPUBLIC);
+    Livre Livre3 = Livre("Romain Grondin", "Chroniques d'un fanboy", "Editions We Care", "0000000003", PUBLIC::ADOS);
+    Livre Livre4 = Livre("Nina Loiseau", "Il m'insuporte.", "Editions We Care", "0000000004", PUBLIC::TOUTPUBLIC);
     Livre Livre5 = Livre("Mickael Jackson", "Mon imposture", "Editions We Care", "0000000005", PUBLIC::TOUTPUBLIC);
     Livre Livre6 = Livre("Sithia Do Thong", "La folle histoire du BDA", "Editions We Care", "0000000006", PUBLIC::TOUTPUBLIC);
     Livre Livre7 = Livre("Mimoun Mohamed", "Comment faire ses passations ?", "Editions We Care", "0000000007", PUBLIC::TOUTPUBLIC);
     Livre Livre8 = Livre("Alexandre Menasria", "Comment faire ses passations ? Tome 2", "Editions We Care", "0000000008", PUBLIC::TOUTPUBLIC);
-    Livre Livre9 = Livre("Ahmad Iksi", "Poèmes dédiés à mon merveilleux Isam", "Editions We Care", "0000000009", PUBLIC::TOUTPUBLIC);
+    Livre Livre9 = Livre("Ahmad Iksi", "Poèmes dédiés à mon merveilleux Isam", "Editions We Care", "0000000009", PUBLIC::ADULTE);
 
     //Ajout des livres dans leur bibliotheque
     Lanvin.ajouterLivre(&Livre1);

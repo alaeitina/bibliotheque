@@ -43,3 +43,7 @@ void Livre::affiche() {
     cout << this->titre << ", " << this->auteur << ", " << this->editeur << "- type : " << this->type << endl;
 }
 
+string Livre::getISBN() const{
+    return ISBN;
+}
+

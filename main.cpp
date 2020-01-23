@@ -10,12 +10,13 @@
 #include "PieceDeTheatre.h"
 #include "RecueilDePoesie.h"
 #include "Roman.h"
+#include "interfaceTools.h"
 
 void sansInterface();
 
 int main() {
 
-    sansInterface();
+    interfaceGlobale();
 
     return 0;
 }
@@ -39,9 +40,9 @@ void sansInterface(){
     RecueilDePoesie Livre9 = RecueilDePoesie("Ahmad Iksi", "Poèmes dédiés à mon merveilleux Isam", "Editions We Care", "0000000009", PUBLIC::ADULTE, INDICATEURS::PROSE);
 
     //Adherent
-    Adherent Adherent1 = Adherent("Alaei", "Tina", 1, &Lanvin, 1);
-    Adherent Adherent2 = Adherent("Laurent", "Leo", 2, &Courbet, 1);
-    Adherent Adherent3 = Adherent("Alaei", "Tina", 3, &StPaul, 2);
+    Adherent Adherent1 = Adherent("Alaei", "Tina", &Lanvin);
+    Adherent Adherent2 = Adherent("Laurent", "Leo", &Courbet);
+    Adherent Adherent3 = Adherent("Alaei", "Tina", &StPaul);
 
     //Ajout des livres dans leur bibliotheque
     Lanvin.ajouterLivre(&Livre1);
@@ -61,12 +62,12 @@ void sansInterface(){
     Courbet.afficheLivres();
     StPaul.afficheLivres();
 
-    Adherent1.emprunt(&Lanvin, 1);
-    Adherent1.emprunt(&Lanvin, 2); //limEmprunt
-    Adherent2.emprunt(&Lanvin, 5); //non Adherent
-    Adherent1.rendre(&Lanvin, 2);
-    Adherent1.rendre(&Lanvin, 1);
-    Adherent1.emprunt(&Lanvin, 7);
+    Adherent1.emprunt(1);
+    Adherent1.emprunt(2); //limEmprunt
+    Adherent2.emprunt(5); //non Adherent
+    Adherent1.rendre(2);
+    Adherent1.rendre(1);
+    Adherent1.emprunt(7);
 
     Lanvin.demande(&StPaul, "0000000009");
     cout << etatName(Livre9.getEtat()) << endl;
@@ -83,7 +84,7 @@ void sansInterface(){
 
     cout << endl;
     cout << "--- Adh1 emprunte a Lanvin" << endl;
-    Adherent1.emprunt(&Lanvin, 8);
+    Adherent1.emprunt(8);
     Adherent1.affiche();
     cout << etatName(Livre9.getEtat()) << endl;
 
@@ -94,7 +95,7 @@ void sansInterface(){
 
     cout << endl;
     cout << "--- Adh1 rend a Lanvin" << endl;
-    Adherent1.rendre(&Lanvin, 8);
+    Adherent1.rendre(8);
     cout << etatName(Livre9.getEtat()) << endl;
 
     cout << endl;
@@ -105,3 +106,5 @@ void sansInterface(){
     cout << "fin du game" << endl;
 
 }
+
+

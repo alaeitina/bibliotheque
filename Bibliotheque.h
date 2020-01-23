@@ -6,7 +6,6 @@
 #define BIBLIOTHEQUE_BIBLIOTHEQUE_H
 
 
-
 #include "Livre.h"
 #include <vector>
 
@@ -19,11 +18,16 @@ private:
     static int codeNext;
     vector<Livre*> listeLivres;
     vector<Livre*> emprunts;
+    int limEmprunts;
 
 
 public:
     Bibliotheque(string, string);
+    Bibliotheque(string, string, int);
     string getNom() const;
+    int getCode() const;
+    int getLimEmprunts() const;
+    void affiche();
     void ajouterLivre(Livre*);
     void afficheLivres();
     void afficheLivreParCategorie(int);

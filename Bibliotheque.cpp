@@ -4,21 +4,44 @@
 
 #include "Bibliotheque.h"
 
-int Bibliotheque::codeNext = 0;
+int Bibliotheque::codeNext = 1;
 
 Bibliotheque::Bibliotheque(string n, string a){
     nom = n;
     adresse = a;
     code = codeNext;
     codeNext++;
+    limEmprunts = 3;
+}
+
+Bibliotheque::Bibliotheque(string n, string a, int lim){
+    nom = n;
+    adresse = a;
+    code = codeNext;
+    codeNext++;
+    limEmprunts = lim;
 }
 
 string Bibliotheque::getNom() const{
     return nom;
 }
 
+int Bibliotheque::getCode() const {
+    return code;
+}
+
+int Bibliotheque::getLimEmprunts() const{
+    return limEmprunts;
+}
+
 void Bibliotheque::ajouterLivre(Livre* livre) {
     listeLivres.push_back(livre);
+    livre->setTaken();
+}
+
+void Bibliotheque::affiche() {
+    cout << "---- Bibliotheque " << this->nom << " - code " << this->code << endl;
+    cout << this->adresse << endl;
 }
 
 void Bibliotheque::afficheLivres() {
@@ -151,3 +174,4 @@ void Bibliotheque::rendre() {
         }
     }
 }
+

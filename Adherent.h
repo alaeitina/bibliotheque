@@ -13,17 +13,20 @@ private:
     string nom;
     string prenom;
     int numAdherent;
+    static int numNext;
     Bibliotheque* inscritA;
     vector<Livre*> emprunts;
-    int limEmprunts;
 
 public:
-    Adherent(string, string, int, Bibliotheque*, int);
+    Adherent(string, string, Bibliotheque*);
+    string getNomPrenom() const;
+    vector<Livre*> getEmprunts() const;
     void affiche();
-    void emprunt(Bibliotheque*, int);
-    void rendre(Bibliotheque*, int);
+    void emprunt(int);
+    void rendre(int);
+    int getNumAdherent() const;
     bool isAdherentBibliotheque(Bibliotheque* bibliotheque);
-
+    Bibliotheque* getInscritA() const;
 
 
 };

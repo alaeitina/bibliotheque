@@ -25,6 +25,7 @@ protected:
     int etat;
     static int codeNext;
     int type;
+    bool taken;
 
 public:
     Livre(string, string, string, string, int);
@@ -34,6 +35,8 @@ public:
     int getEtat() const;
     string getISBN() const;
     virtual void affiche();
+    bool isTaken() const;
+    void setTaken();
 
 };
 

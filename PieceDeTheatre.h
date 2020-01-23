@@ -16,7 +16,6 @@ private:
 public:
     PieceDeTheatre(string, string, string, string, int, int);
     void affiche();
-    enum SIECLE {Ie = 1, IIe = 2, IIIe = 3, IVe = 4, Ve = 5, VIe = 6, VIIe = 7, VIIIe = 8, IXe = 9, Xe = 10, XIe = 11, XIIe = 12, XIIIe = 13, XIVe = 14, XVe = 15, XVIe = 16, XVIIe = 17, XVIIIe = 18, XIXe = 19, XXe = 20, XXIe = 21};
 };
 
 

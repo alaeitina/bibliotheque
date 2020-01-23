@@ -16,6 +16,7 @@ Livre::Livre(string a, string t, string edit, string num_isbn, int publ) {
     publicDestine = publ;
     etat = ETATS::LIBRE;
     type = TYPE::LIVRE;
+    taken = false;
 }
 
 void Livre::setEtat(int newEtat){
@@ -46,5 +47,13 @@ void Livre::affiche() {
 
 string Livre::getISBN() const{
     return ISBN;
+}
+
+bool Livre::isTaken() const {
+    return taken;
+}
+
+void Livre::setTaken() {
+    taken = true;
 }
 

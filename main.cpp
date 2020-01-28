@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 07/01/2020.
-//
 
 #include "Adherent.h"
 #include "Album.h"
@@ -18,6 +15,7 @@ int main() {
 
     interfaceGlobale();
 
+    //sansInterface();
     return 0;
 }
 
@@ -62,12 +60,14 @@ void sansInterface(){
     Courbet.afficheLivres();
     StPaul.afficheLivres();
 
+    cout << "_________" << endl;
     Adherent1.emprunt(1);
     Adherent1.emprunt(2); //limEmprunt
-    Adherent2.emprunt(5); //non Adherent
     Adherent1.rendre(2);
     Adherent1.rendre(1);
     Adherent1.emprunt(7);
+
+    cout << "_________" << endl;
 
     Lanvin.demande(&StPaul, "0000000009");
     cout << etatName(Livre9.getEtat()) << endl;
@@ -76,7 +76,8 @@ void sansInterface(){
     Lanvin.rendre();
     cout << etatName(Livre9.getEtat()) << endl;
 
-    cout << endl;
+    cout << "_________" << endl;
+
     cout << "--- Lanvin demande a StPaul" << endl;
     Lanvin.demande(&StPaul, "0000000009");
     Lanvin.afficheLivres();
@@ -84,7 +85,7 @@ void sansInterface(){
 
     cout << endl;
     cout << "--- Adh1 emprunte a Lanvin" << endl;
-    Adherent1.emprunt(8);
+    Adherent1.emprunt(9);
     Adherent1.affiche();
     cout << etatName(Livre9.getEtat()) << endl;
 
@@ -95,7 +96,7 @@ void sansInterface(){
 
     cout << endl;
     cout << "--- Adh1 rend a Lanvin" << endl;
-    Adherent1.rendre(8);
+    Adherent1.rendre(9);
     cout << etatName(Livre9.getEtat()) << endl;
 
     cout << endl;

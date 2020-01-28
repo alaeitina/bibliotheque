@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 22/01/2020.
-//
 
 #include "Adherent.h"
 #include "Album.h"
@@ -14,10 +11,14 @@
 vector<Bibliotheque*> fixturesBibliotheques();
 vector<Livre*> fixturesLivres();
 
+void formAdherent(Bibliotheque* bibliotheque, Adherent* adherent);
+void formBibliotheque(Bibliotheque* bibliotheque);
+void formLivre(Livre* livre);
+void formAlbum(Album* livre);
+void formBandeDessinee(BandeDessinee* livre);
+void formPieceDeTheatre(PieceDeTheatre* livre);
+void formRecueilDePoesie(RecueilDePoesie* livre);
+void formRoman(Roman* livre);
 void interfaceGlobale();
-void interfaceAdherent(vector<Bibliotheque*>, vector<Livre*> , vector<Adherent*>);
-void interfaceBibliotheque();
-void interfaceLibraire();
-vector<Livre*> formLivre(vector<Livre*>);
-vector<Adherent*> formAdherent(vector<Adherent*>, Bibliotheque*);
-void interfaceBibliotheque(vector<Bibliotheque*>, vector<Livre*>, vector<Adherent*>);
+void interfaceAdherent(vector<Bibliotheque*> listeBibliotheques, vector<Livre*> listeLivres, vector<Adherent*> listeAdherents);
+void interfaceBibliotheque(vector<Bibliotheque*> listeBibliotheques, vector<Livre*> listeLivres, vector<Adherent*> listeAdherents);

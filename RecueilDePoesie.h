@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 07/01/2020.
-//
 
 #ifndef BIBLIOTHEQUE_RECUEILDEPOESIE_H
 #define BIBLIOTHEQUE_RECUEILDEPOESIE_H
@@ -13,6 +10,7 @@ private:
 public:
     RecueilDePoesie(string, string, string, string, int, int);
     void affiche();
+    RecueilDePoesie();
 };
 
 

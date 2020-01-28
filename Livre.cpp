@@ -1,10 +1,19 @@
-//
-// Created by Tina Alaei on 06/01/2020.
-//
 
 #include "Livre.h"
 
-int Livre::codeNext = 0;
+int Livre::codeNext = 1;
+
+Livre::Livre() {
+    code = 0;
+    auteur = "";
+    titre = "";
+    editeur = "";
+    ISBN = "";
+    publicDestine = PUBLIC::TOUTPUBLIC;
+    etat = ETATS::LIBRE;
+    type = TYPE::LIVRE;
+
+}
 
 Livre::Livre(string a, string t, string edit, string num_isbn, int publ) {
     code = codeNext;

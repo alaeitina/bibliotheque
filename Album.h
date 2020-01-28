@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 14/01/2020.
-//
 
 #ifndef BIBLIOTHEQUE_ALBUM_H
 #define BIBLIOTHEQUE_ALBUM_H
@@ -15,6 +12,7 @@ private:
 
 public:
     Album(string, string, string, string, int, int);
+    Album();
     void affiche();
 };
 

@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 07/01/2020.
-//
 
 #ifndef BIBLIOTHEQUE_BANDEDESSINEE_H
 #define BIBLIOTHEQUE_BANDEDESSINEE_H
@@ -13,6 +10,7 @@ protected:
 public :
     BandeDessinee(string, string, string, string, int, string);
     void affiche();
+    BandeDessinee();
 };
 
 

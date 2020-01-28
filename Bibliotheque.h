@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 06/01/2020.
-//
 
 #ifndef BIBLIOTHEQUE_BIBLIOTHEQUE_H
 #define BIBLIOTHEQUE_BIBLIOTHEQUE_H
@@ -42,6 +39,8 @@ public:
     void supprimer(int);
     void demande(Bibliotheque*, string);
     void rendre();
+    Bibliotheque();
+
 
 };
 

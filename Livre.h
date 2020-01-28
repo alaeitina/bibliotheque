@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 06/01/2020.
-//
 
 #ifndef BIBLIOTHEQUE_LIVRE_H
 #define BIBLIOTHEQUE_LIVRE_H
@@ -29,6 +26,7 @@ protected:
 
 public:
     Livre(string, string, string, string, int);
+    Livre();
     void setEtat(int);
     int getCode() const;
     int getType() const;

@@ -1,6 +1,4 @@
-//
-// Created by Tina Alaei on 18/01/2020.
-//
+
 #include "tools.h"
 
 

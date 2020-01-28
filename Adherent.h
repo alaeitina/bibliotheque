@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 14/01/2020.
-//
 
 #ifndef BIBLIOTHEQUE_ADHERENT_H
 #define BIBLIOTHEQUE_ADHERENT_H
@@ -27,6 +24,7 @@ public:
     int getNumAdherent() const;
     bool isAdherentBibliotheque(Bibliotheque* bibliotheque);
     Bibliotheque* getInscritA() const;
+    Adherent(Bibliotheque*);
 
 
 };

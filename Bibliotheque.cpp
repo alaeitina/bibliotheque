@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 06/01/2020.
-//
 
 #include "Bibliotheque.h"
 
@@ -175,3 +172,9 @@ void Bibliotheque::rendre() {
     }
 }
 
+Bibliotheque::Bibliotheque(){
+    nom = "";
+    adresse = "";
+    code = 0;
+    limEmprunts = 3;
+}

@@ -1,6 +1,3 @@
-//
-// Created by Tina Alaei on 14/01/2020.
-//
 
 #include "Adherent.h"
 
@@ -35,7 +32,6 @@ void Adherent::emprunt(int codeLivre) {
         cout << "Vous avez depasse la limite d'emprunt de livres dans cette Bibliotheque" << endl;
         return;
     }
-
     if (this->inscritA->possedeLivreListe(codeLivre)) {
         if (this->inscritA->searchListeLivre(codeLivre)->getEtat() == ETATS::LIBRE) {
             this->inscritA->search(codeLivre)->setEtat(ETATS::EMPRUNTE);
@@ -100,5 +96,9 @@ Bibliotheque* Adherent::getInscritA() const {
     return inscritA;
 }
 
-
-
+Adherent::Adherent(Bibliotheque* bibliotheque) {
+    nom = "";
+    prenom = "";
+    numAdherent = 0;
+    inscritA = bibliotheque;
+}
